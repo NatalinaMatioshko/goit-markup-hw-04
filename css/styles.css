@@ -98,21 +98,19 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-.menu-link {
-  color: #2e2f42;
+
+.menu-link .studio {
+  color: #404bbf;
   padding: 24px 0;
+  position: relative;
 }
 
 .menu-link:hover,
 .menu-link:focus {
   color: #404bbf;
 }
-.menu-item:first-child {
-  position: relative;
-  color: #404bbf;
-}
 
-.menu-item:first-child::after {
+.menu-link::after {
   content: "";
   width: 100%;
   border-radius: 2px;
