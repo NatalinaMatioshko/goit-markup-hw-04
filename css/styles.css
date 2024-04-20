@@ -42,6 +42,8 @@ img {
   display: flex;
   border-bottom: 1px solid #e7e9fc;
   align-items: center;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 .container {
   max-width: 1168px;
@@ -105,13 +107,21 @@ img {
 .menu-link:focus {
   color: #404bbf;
 }
+.menu-item:first-child {
+  position: relative;
+  color: #404bbf;
+}
+
 .menu-item:first-child::after {
+  content: "";
+  width: 100%;
   border-radius: 2px;
   background-color: #404bbf;
-  width: 48px;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
   height: 4px;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ========= ADRESSA =======*/
 .contacts {
@@ -132,6 +142,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .cont-link {
   color: #434455;
