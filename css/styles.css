@@ -44,9 +44,10 @@ img {
   align-items: center;
 }
 .container {
-  width: 1158px;
+  max-width: 1168px;
   padding: 0 15px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hat-head .container {
@@ -104,6 +105,14 @@ img {
 .menu-link:focus {
   color: #404bbf;
 }
+.menu-item:first-child::after {
+  border-radius: 2px;
+  background-color: #404bbf;
+  width: 48px;
+  height: 4px;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
 /* ========= ADRESSA =======*/
 .contacts {
   font-weight: 400;
@@ -137,6 +146,14 @@ img {
 /* ======= FIRST SECTION ========*/
 .section-first {
   background-color: #2e2f42;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office\ 1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   font-family: "Roboto", sans-serif;
   font-weight: 700px;
   font-size: 16px;
@@ -148,6 +165,7 @@ img {
   align-items: center;
   margin: 0 auto;
   height: 600;
+  max-width: 1440px;
 }
 
 .main-title {
@@ -166,7 +184,7 @@ img {
 .top-button {
   display: block;
   font-family: "Roboto", sans-serif;
-  background: #4d5ae5;
+  background-color: #4d5ae5;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -177,7 +195,6 @@ img {
   border: none;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background: #4d5ae5;
   text-align: center;
   min-width: 169px;
   margin: 48px auto 0;
@@ -217,6 +234,16 @@ img {
 .first-item {
   width: calc((100% - 72px) / 4);
 }
+
+.icons-ben {
+  background-color: #f4f4fd;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  min-width: 264px;
+  height: 112px;
+  padding: 24px 100px;
+}
+
 .title-three {
   font-weight: 500;
   font-size: 20px;
@@ -255,12 +282,22 @@ img {
   gap: 24px;
   justify-content: center;
 }
+.menu-second .second-item {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
 .second-item {
   background-color: #ffffff;
   width: calc((100% - 72px) / 4);
   border-radius: 0 0 4px 4px;
   line-height: 1.11;
   text-transform: capitalize;
+}
+
+.soc-links {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
 }
 
 .second-text {
@@ -283,14 +320,15 @@ img {
   column-gap: 24px;
   row-gap: 48px;
 }
+.menu-third:hover .third-item:hover {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
 .third-item {
   width: calc((100% - 48px) / 3);
 }
-.portfol-cards {
-  padding: 32px 16px;
-  border: 1px solid #e7e9fc;
-  border-top: none;
-}
+
 .title-third {
   font-weight: 500;
   font-size: 20px;
@@ -336,4 +374,11 @@ img {
   color: #4d5ae5;
   padding-right: 76px;
   margin-right: 76px;
+}
+
+.social-media .social-medial-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
 }
